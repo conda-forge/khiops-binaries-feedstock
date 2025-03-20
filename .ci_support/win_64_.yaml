@@ -1,0 +1,18 @@
+ace:
+- 8.0.2
+c_stdlib:
+- vs
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- vs2019
+mpi:
+- msmpi =10.1.1
+mpich:
+- '4'
+openmpi:
+- '4'
+target_platform:
+- win-64
