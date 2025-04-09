@@ -4,7 +4,7 @@
 set -euo pipefail
 
 # Configure project
-cmake -B build/conda -S . -D BUILD_JARS=OFF -D TESTING=OFF -D CMAKE_BUILD_TYPE=Release -G Ninja
+cmake ${CMAKE_ARGS} -B build/conda -S . -D BUILD_JARS=OFF -D TESTING=OFF -D CMAKE_BUILD_TYPE=Release -G Ninja
 
 # Build MODL and MODL_Coclustering
 cmake --build build/conda --parallel --target MODL MODL_Coclustering KhiopsNativeInterface _khiopsgetprocnumber
