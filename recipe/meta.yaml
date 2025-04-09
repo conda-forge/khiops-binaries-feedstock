@@ -7,7 +7,7 @@ source:
   url: https://github.com/KhiopsML/khiops/archive/refs/tags/{{ version }}.tar.gz
   sha256: 7c9667c765e876f963b5c30a8280d7de478ec089d1dca696a140d53ff2ba72da
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -46,6 +46,7 @@ outputs:
       - Library/bin/khiops_coclustering.cmd  # [win]
     test:
       commands:
+        - export KHIOPS_MPI_VERBOSE=true  # [linux or osx]
         - khiops_env --env
         - khiops -s
         - khiops_coclustering -s
