@@ -7,7 +7,7 @@ source:
   url: https://github.com/KhiopsML/khiops/archive/refs/tags/{{ version }}.tar.gz
   sha256: 7c9667c765e876f963b5c30a8280d7de478ec089d1dca696a140d53ff2ba72da
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -37,14 +37,18 @@ outputs:
       run:
         - {{ mpi }}
     files:
-      - bin/MODL*
-      - bin/_khiopsgetprocnumber*
+      - bin/MODL*                    # [linux or osx]
+      - bin/MODL_Coclustering*       # [linux or osx]
+      - bin/_khiopsgetprocnumber     # [linux or osx]
       - bin/khiops_env               # [linux or osx]
       - bin/khiops                   # [linux or osx]
       - bin/khiops_coclustering      # [linux or osx]
-      - Library/bin/khiops_env.cmd           # [win]
-      - Library/bin/khiops.cmd               # [win]
-      - Library/bin/khiops_coclustering.cmd  # [win]
+      - Library/bin/khiops_env.cmd            # [win]
+      - Library/bin/khiops.cmd                # [win]
+      - Library/bin/khiops_coclustering.cmd   # [win]
+      - Library/bin/MODL.exe                  # [win]
+      - Library/bin/MODL_Coclustering.exe     # [win]
+      - Library/bin/_khiopsgetprocnumber.exe  # [win]
     test:
       commands:
         - export KHIOPS_MPI_VERBOSE=true  # [linux or osx]
