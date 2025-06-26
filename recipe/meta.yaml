@@ -63,7 +63,7 @@ outputs:
     version: {{ version }}
     files:
       - lib/libKhiopsNativeInterface.so*                  # [linux]
-      - lib/libKhiopsNativeInterface.{{ version }}.dylib  # [osx]
+      - lib/libKhiopsNativeInterface.{{ khiops_version }}.dylib  # [osx]
       - include/KhiopsNativeInterface.h                   # [linux or osx]
       - Library/bin/KhiopsNativeInterface.dll           # [win]
       - Library/lib/KhiopsNativeInterface.lib           # [win]
@@ -77,7 +77,7 @@ outputs:
     test:
       commands:
         - test -f $PREFIX/lib/libKhiopsNativeInterface.so                   # [linux]
-        - test -f $PREFIX/lib/libKhiopsNativeInterface.{{ version }}.dylib  # [osx]
+        - test -f $PREFIX/lib/libKhiopsNativeInterface.{{ khiops_version }}.dylib  # [osx]
         - if not exist %LIBRARY_LIB%\KhiopsNativeInterface.lib exit 1      # [win]
         - if not exist %LIBRARY_BIN%\KhiopsNativeInterface.dll exit 1      # [win]
 
