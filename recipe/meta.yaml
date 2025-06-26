@@ -1,4 +1,4 @@
-{% set version = "10.3.0".replace("-", "") %}
+{% set version = "10.3.2-rc.0".replace("-", "") %}
 package:
   name: khiops-binaries
   version: {{ version }}
