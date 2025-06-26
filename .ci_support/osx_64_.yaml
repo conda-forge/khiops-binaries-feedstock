@@ -11,7 +11,7 @@ c_stdlib_version:
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge rc
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
@@ -19,7 +19,7 @@ cxx_compiler_version:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 mpi:
-- openmpi
+- mpich =4.0.3
 mpich:
 - '4'
 openmpi:

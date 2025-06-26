@@ -7,3 +7,5 @@ mpi:
   - mpich =4.0.3 # [osx]
   - msmpi =10.1.1 # [win]
 
+channel_targets:
+  - conda-forge rc

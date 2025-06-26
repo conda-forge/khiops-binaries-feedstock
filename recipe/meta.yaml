@@ -1,13 +1,15 @@
-{% set version = "10.3.0".replace("-", "") %}
+{% set khiops_version = "10.3.2-rc.0" %}
+{% set version = khiops_version.replace("-", "") %}
+
 package:
   name: khiops-binaries
   version: {{ version }}
 
 source:
-  url: https://github.com/KhiopsML/khiops/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 7c9667c765e876f963b5c30a8280d7de478ec089d1dca696a140d53ff2ba72da
+  url: https://github.com/KhiopsML/khiops/archive/refs/tags/{{ khiops_version }}.tar.gz
+  sha256: 2321837b22b84567e7b3fd08a7963d540f4e03ec488fb0ebdca5ecc14bf9ef01
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -61,7 +63,7 @@ outputs:
     version: {{ version }}
     files:
       - lib/libKhiopsNativeInterface.so*                  # [linux]
-      - lib/libKhiopsNativeInterface.{{ version }}.dylib  # [osx]
+      - lib/libKhiopsNativeInterface.{{ khiops_version }}.dylib  # [osx]
       - include/KhiopsNativeInterface.h                   # [linux or osx]
       - Library/bin/KhiopsNativeInterface.dll           # [win]
       - Library/lib/KhiopsNativeInterface.lib           # [win]
@@ -75,7 +77,7 @@ outputs:
     test:
       commands:
         - test -f $PREFIX/lib/libKhiopsNativeInterface.so                   # [linux]
-        - test -f $PREFIX/lib/libKhiopsNativeInterface.{{ version }}.dylib  # [osx]
+        - test -f $PREFIX/lib/libKhiopsNativeInterface.{{ khiops_version }}.dylib  # [osx]
         - if not exist %LIBRARY_LIB%\KhiopsNativeInterface.lib exit 1      # [win]
         - if not exist %LIBRARY_BIN%\KhiopsNativeInterface.dll exit 1      # [win]
 
