@@ -73,6 +73,7 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-khiops--core-green.svg)](https://anaconda.org/conda-forge/khiops-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/khiops-core.svg)](https://anaconda.org/conda-forge/khiops-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/khiops-core.svg)](https://anaconda.org/conda-forge/khiops-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/khiops-core.svg)](https://anaconda.org/conda-forge/khiops-core) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-kni-green.svg)](https://anaconda.org/conda-forge/kni) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/kni.svg)](https://anaconda.org/conda-forge/kni) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/kni.svg)](https://anaconda.org/conda-forge/kni) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/kni.svg)](https://anaconda.org/conda-forge/kni) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-kni--transfer-green.svg)](https://anaconda.org/conda-forge/kni-transfer) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/kni-transfer.svg)](https://anaconda.org/conda-forge/kni-transfer) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/kni-transfer.svg)](https://anaconda.org/conda-forge/kni-transfer) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/kni-transfer.svg)](https://anaconda.org/conda-forge/kni-transfer) |
 
 Installing khiops-binaries
 ==========================
@@ -84,16 +85,16 @@ conda config --add channels conda-forge/label/rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/rc` channel has been enabled, `khiops-core, kni` can be installed with `conda`:
+Once the `conda-forge/label/rc` channel has been enabled, `khiops-core, kni, kni-transfer` can be installed with `conda`:
 
 ```
-conda install khiops-core kni
+conda install khiops-core kni kni-transfer
 ```
 
 or with `mamba`:
 
 ```
-mamba install khiops-core kni
+mamba install khiops-core kni kni-transfer
 ```
 
 It is possible to list all of the versions of `khiops-core` available on your platform with `conda`:
