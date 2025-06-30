@@ -9,7 +9,7 @@ source:
   url: https://github.com/KhiopsML/khiops/archive/refs/tags/{{ khiops_version }}.tar.gz
   sha256: 2321837b22b84567e7b3fd08a7963d540f4e03ec488fb0ebdca5ecc14bf9ef01
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
