@@ -19,8 +19,8 @@ copy build\conda\lib\KhiopsNativeInterface.lib %LIBRARY_LIB%
 
 REM Copy the scripts to the Conda PREFIX path
 copy build\conda\tmp\khiops_env.cmd %LIBRARY_BIN%
-copy packaging\windows\khiops_coclustering.cmd %LIBRARY_BIN%
-copy packaging\windows\khiops.cmd %LIBRARY_BIN%
+copy build\conda\tmp\khiops_coclustering.cmd %LIBRARY_BIN%
+copy build\conda\tmp\khiops.cmd %LIBRARY_BIN%
 
 REM Copy the header file
 copy src\Learning\KhiopsNativeInterface\KhiopsNativeInterface.h %LIBRARY_INC%
