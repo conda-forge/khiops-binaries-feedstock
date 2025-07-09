@@ -11,11 +11,11 @@ c_stdlib_version:
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge rc
+- conda-forge main
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '18'
+- '19'
 macos_machine:
 - arm64-apple-darwin20.0.0
 mpi:
