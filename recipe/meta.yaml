@@ -1,4 +1,4 @@
-{% set khiops_version = "11.0.0-a.0" %}
+{% set khiops_version = "11.0.0-b.0" %}
 {% set version = khiops_version.replace("-", "") %}
 
 package:
@@ -7,9 +7,9 @@ package:
 
 source:
   url: https://github.com/KhiopsML/khiops/archive/refs/tags/{{ khiops_version }}.tar.gz
-  sha256: 4f7800480835ec96d3b74f45daa05a6748cc43e79b563074e6655b2386744c10
+  sha256: 424b86a9d548c25ff9e3e37e614939fe9b0c3c840771a6487da73011a8d2bb27
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
