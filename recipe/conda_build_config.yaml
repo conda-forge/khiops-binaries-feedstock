@@ -8,4 +8,4 @@ mpi:
   - msmpi =10.1.1 # [win]
 
 channel_targets:
-  - conda-forge rc # label for test
+  - conda-forge rc # label ("rc" for tests, "main" for official releases)
