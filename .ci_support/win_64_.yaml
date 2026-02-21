@@ -9,7 +9,7 @@ cxx_compiler:
 mpi:
 - msmpi =10.1.1
 mpich:
-- '4'
+- '5'
 openmpi:
 - '5'
 target_platform:
