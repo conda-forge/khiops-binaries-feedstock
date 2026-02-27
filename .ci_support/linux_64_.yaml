@@ -5,7 +5,7 @@ c_stdlib_version:
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge rc
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -15,7 +15,7 @@ docker_image:
 mpi:
 - mpich
 mpich:
-- '4'
+- '5'
 openmpi:
 - '5'
 target_platform:
