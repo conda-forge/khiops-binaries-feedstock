@@ -2,8 +2,8 @@
 # Setting the mpi implementation
 # msmpi is not in the global pinning
 mpi:
-  - mpich # [linux or osx]
+  - openmpi # [linux or osx]
   - msmpi =10.1.1 # [win]
 
 channel_targets:
-  - conda-forge main # label ("rc" for tests, "main" for official releases)
+  - conda-forge rc # label ("rc" for tests, "main" for official releases)
