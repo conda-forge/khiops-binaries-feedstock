@@ -17,7 +17,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/khiops-binaries-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/khiops-binaries-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -31,24 +38,10 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25210&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khiops-binaries-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25210&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khiops-binaries-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25210&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khiops-binaries-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -77,14 +70,14 @@ Current release info
 Installing khiops-binaries
 ==========================
 
-Installing `khiops-binaries` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `khiops-binaries` from the `conda-forge/label/rc` channel can be achieved by adding `conda-forge/label/rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `khiops-core, kni` can be installed with `conda`:
+Once the `conda-forge/label/rc` channel has been enabled, `khiops-core, kni` can be installed with `conda`:
 
 ```
 conda install khiops-core kni
@@ -99,26 +92,26 @@ mamba install khiops-core kni
 It is possible to list all of the versions of `khiops-core` available on your platform with `conda`:
 
 ```
-conda search khiops-core --channel conda-forge
+conda search khiops-core --channel conda-forge/label/rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search khiops-core --channel conda-forge
+mamba search khiops-core --channel conda-forge/label/rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search khiops-core --channel conda-forge
+mamba repoquery search khiops-core --channel conda-forge/label/rc
 
 # List packages depending on `khiops-core`:
-mamba repoquery whoneeds khiops-core --channel conda-forge
+mamba repoquery whoneeds khiops-core --channel conda-forge/label/rc
 
 # List dependencies of `khiops-core`:
-mamba repoquery depends khiops-core --channel conda-forge
+mamba repoquery depends khiops-core --channel conda-forge/label/rc
 ```
 
 
