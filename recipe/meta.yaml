@@ -9,7 +9,7 @@ source:
   url: https://github.com/KhiopsML/khiops/archive/refs/tags/{{ khiops_version }}.tar.gz
   sha256: 502617d456889549734b3d1843da7786815fbeaa5d1a71561d9e7a25af5d6510
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -51,8 +51,6 @@ outputs:
       - Library/bin/MODL.exe                  # [win]
       - Library/bin/MODL_Coclustering.exe     # [win]
       - Library/bin/_khiopsgetprocnumber.exe  # [win]
-      - etc/conda/activate.d/khiops-core_activate.sh
-      - etc/conda/deactivate.d/khiops-core_deactivate.sh
     test:
       commands:
         - export KHIOPS_MPI_VERBOSE=true  # [linux or osx]
